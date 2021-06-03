@@ -1,0 +1,419 @@
+@charset "UTF-8";
+/*Importo otros archivos que son bloques y secciones SCSS del proyecto*/
+header {
+  width: 100%;
+  height: 180px;
+  background-color: #fdeaea;
+  margin-bottom:0;
+  box-shadow: 0 0 5px 0 #946767; }
+  header .header__logo {
+    display: flex;
+    justify-content: center; }
+
+/*Menu desplegable CSS*/
+#header__menu {
+  margin: auto;
+  width: 600px;
+  font-family: lato;
+  font-size: 23px; }
+  #header__menu .header__navbar li a {
+    display: block;
+    background-color: transparent;
+    color: #7a6767;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin-bottom: 5px; }
+    #header__menu .header__navbar li a .header__navbar li a:hover {
+      background-color: #ffd3d3;
+      box-shadow: 0 0 5px 0 #946767; }
+
+ul, ol {
+  list-style: none; }
+
+ul, ol:hover {
+  background-color: #fdf2f2; }
+
+.header__navbar li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px; }
+
+.header__navbar li:hover > ul {
+  display: block; }
+
+.header__navbar > li {
+  float: left; }
+
+/***************************/
+/*     ABOUT     */
+/***************************/
+section {
+  width: 90%;
+  max-width: 1000px;
+  margin: 1.6em auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  /*Aplico Grid*/
+  display: grid;
+  gap: none;
+  /*indico que no quiero espacio entre las dos cajas*/
+  grid-template-columns: repeat(1, 1fr);
+  /*genero con fracciones mis 2 columnas, para la foto, y otra para el texto*/
+  align-items: center;
+  /*Caja de Foto, y le indico donde ubicarse*/ }
+  section .section__me {
+    grid-row: 1;
+    grid-column: 1; }
+
+/*Caja de Texto*/
+.section__text {
+  grid-column: 2;
+  align-items: center;
+  height: 556px;
+  background-color: white;
+  border: 1px solid #c4d8dc;
+  border-radius: 0.25rem;
+  /*Hago aparecer el texto "About me"*/ }
+  .section__text p {
+    animation-duration: 2s;
+    animation-name: aparecer; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.about-container{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+    
+.card{
+  display: inline-block;
+  padding: 5em;
+  margin-top: 2em;
+  max-width: 18rem;
+  margin-right: 7px;
+  margin-bottom: 4.5rem;
+  margin-left: 7px;
+  padding: 3.25rem 2rem 2rem 2rem;
+  border: 1px solid #c4d8dc;
+  border-radius: 0.5rem;
+  background: #fef6ff;
+}
+
+@media screen and (max-width: 980px) {
+.section__text {
+  font-size: 15px;
+  margin: 0px;
+} 
+.section__text p {
+  margin: 0.9em;}
+.section {
+  width: 400px;
+  height: auto;
+}
+}
+
+
+/***************************/
+/*     PORTFOLIO     */
+/***************************/
+.portfolio-container{
+  padding-top: 50px;
+}
+
+.container {
+  /*Aplico Grid*/
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /*Genero columnas*/
+  grid-gap: 30px;
+  /*Genero los espacios entre cajas*/
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  justify-content: center; }
+
+.container__item {
+  background-color: #fffbfb;
+  cursor: pointer;
+  /*Cambia el cursor del mouse al pasar sobre las cajas*/
+  box-shadow: 0 0 5px 0 #b38484;
+  /*Sombra de las cajas*/
+  transition: all 300ms;
+  /*Duración de transicion*/
+  height: 520px; }
+
+.container__text h3 {
+  padding-top: 1em;
+  color: #616266; }
+
+.container__item:hover {
+  transform: scale(1.05);
+  /*Para que se haga zoom cuando pasa el cursor por encima de las cajas*/ }
+
+.container__img {
+  max-width: 100%;
+  display: block; }
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 590px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (min-width: 960px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr); } }
+
+/***************************/
+/*     GALLERY     */
+/***************************/
+.gallery-container{
+  padding-top: 50px;
+}
+/*Carousel*/
+.carousel-inner img {
+  display: inline-block;
+  padding: 5em;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  justify-content: center;}
+
+.carousel-item {
+  cursor: pointer;
+  /*Cambia el cursor del mouse al pasar sobre las cajas*/
+  opacity: 0.9; }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  /*flechas de previo y próximo slide*/
+  background-color: rgba(0, 0, 0, 0.541); }
+
+.p-carousel {
+  text-align: center;
+  padding: 0.5em;
+  margin-bottom: 50px;
+  color: #161616;
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  background-color: rgba(255, 235, 205, 0.582); }
+
+.p-carousel {
+  /*animación de aparecer descripción en los slides del carousel*/
+  animation-duration: 2s;
+  animation-name: aparecer2; }
+
+@keyframes aparecer2 {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.badge-grey {
+  /*BUDGET*/
+  color: #fff6f8;
+  background-color: rgba(102, 71, 71, 0.795);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px; }
+
+.carousel-caption h3 {
+  color: cornsilk; }
+
+
+/***************************/
+/*     CONTACT     */
+/***************************/
+
+.contact-container{
+  background-color: white;
+  margin: 5em;
+  border: 1px solid #c4d8dc;
+  border-radius: 0.25rem;
+}
+
+/*Formulario*/
+.form-container {
+  display: block;
+  position: relative;
+  width: auto;
+  height: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 50px; }
+
+.text-container{
+  padding: 10px;
+}
+
+.col-lg-6 {
+  position: relative;
+  height: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 70px; }
+
+/* casillas blancas a rellenar */
+.form-control-input, .form-control-select {
+  display: block;
+  width: 100%;
+  padding-top: 1.0625rem;
+  padding-bottom: 0.0625rem;
+  margin-bottom: 0.50rem;
+  padding-left: 1.3125rem;
+  border: 1px solid #c4d8dc;
+  border-radius: 0.25rem;
+  /* redondeo el borde de las casillas */
+  background-color: #fff;
+  color: #626262;
+  font-family: "Poppins", sans-serif; }
+
+#rselect {
+  padding-bottom: 0.50rem;
+  padding-top: 0.50rem; }
+
+/* Botón de ENVIAR */
+.form-group-button {
+  padding-bottom: 0.50rem;
+  padding-top: 0.50rem;
+}
+
+.social-container{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+/***************************/
+/*     FOOTER     */
+/***************************/
+footer {
+  Width: 100%;
+  height: 60px;
+  background-color: #eea3a3;
+  padding-top: 0,5px; }
+
+.footer__copyright {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: lato;
+  font-size: 12px;
+  color: #3f4149;
+  word-spacing: 1px;
+  padding-top: 20px; }
+
+.footer__span {
+  color: #6d2d2b;
+  font-weight: bold; }
+
+/***************************/
+/*     GENERALES     */
+/***************************/
+/*el asterisco es universal debe colocarse siempre para que sea adaptable en todos los navegadores*/
+⃰ {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fdeaea; }
+
+h1 {
+  font-family: poppins;
+  font-size: 40px;
+  color: #3c3c4d;
+  text-align: center; }
+
+h2 {
+  width: 100%;
+  color: #585866;
+  font-family: 'Libre Baskerville', regular;
+  line-height: 30px;
+  text-align: center;
+  font-size: 20px; }
+
+h3 {
+  width: 100%;
+  color: #606381;
+  font-family: lato;
+  text-align: center; }
+
+h4 {
+  color: #606381;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  margin-left: 20%;
+  margin-right: 20%; }
+
+h5 {
+  color: #606381;
+  font-family: 'Libre Baskerville';
+  text-align: center;
+  font-size: 20px; }
+
+p {
+  text-align: center;
+  line-height: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 20%;
+  color: #413838;
+  font-family: 'Libre Baskerville';
+  font-style: italic; }
+
+/***************************/
+/*     INDEX     */
+/***************************/
+/*Titulo y cuerpo CSS*/
+.cuerpo {
+  background-image: url(https://image.freepik.com/foto-gratis/vista-superior-suministros-oficina-teclado-vegetal_23-2148425940.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 400%;
+  padding-top: 250px;
+  padding-bottom: 18%;
+  align-items: center; }
+  .cuerpo .cuerpo:before {
+    content: "";
+    width: 100%;
+    min-width: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(45deg, white, pink);
+    opacity: 0.9;
+    z-index: -1;
+    /*Sirve para posicionar, que cuando scrolleas el menu o contenido se siga viendo fijo aunque scrolles*/ }
+
+.cuerpo__titulo {
+  color: #3c3c4d;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: poppins;
+  font-display: flex;
+  align-items: center; }
+
+/*Hago aparecer el subtitulo*/
+h2 {
+  animation-duration: 2s;
+  animation-name: aparecer; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
