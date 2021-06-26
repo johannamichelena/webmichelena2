@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SEO-->
+    <meta name="description" content="Johanna Michelena is a graphic designer based in Buenos Aires, Argentina. She is passionate about creating clean and elegant on-brand designs.">
+    <meta name="keywords" content="GRAPHIC DESIGN, GRAPHIC DESIGN, PORTFOLIO, BUENOS AIRES, TRAVELER">
+
+<!--comentario: aca agrego el link Bootstrap sobre mi link de CSS, el Bootstrap pisa el archivo de estilo por encima)-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!--comentario: linkeo el estilo-->
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <title>About me</title>
+    <meta name="author" content="Johanna Michelena">
+
+<!-- Favicon -->
+    <link rel="icon" href="logo/logo-jm.png">
+
+</head>
+<body>
+<header>
+    <!-- Logo -->
+    <a class="header__logo" href="index.html"><img src="logo/logo-jm.png" alt="logo"></a>
+
+<!--comentario: a continuación debe estar el menú desplegable con secciones del sitio en el encabezado-->
+<nav class="navbar navbar-expand-lg navbar-light navbar-center">
+    <div class="container-fluid">
+    <button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link text-center" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active text-center" href="sobremi.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown text-center" href="portfolio.html" id="navbarDropdownMenuLink" role="button">
+                Portfolio
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="extra-pages/web-design.html">Web design</a></li>
+                <li><a class="dropdown-item" href="extra-pages/packaging.html">Packaging</a></li>
+                <li><a class="dropdown-item" href="extra-pages/typographic-poster.html">Typographic poster</a></li>
+                <li><a class="dropdown-item" href="extra-pages/tv-branding.html">TV branding</a></li>
+                <li><a class="dropdown-item" href="extra-pages/editorial-project.html">Editorial project</a></li>
+                <li><a class="dropdown-item" href="extra-pages/magazine.html">Magazine</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-center" href="galeria.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-center" href="contacto.html">Contact</a>
+            </li>
+    </div>
+    </div>
+</nav>
+</header>
+
+<!--comentario: Descripción personal-->
+<section>
+    <div class="section__text">
+        <br>
+        <br>
+        <h1>
+        About me 
+        </h1>
+        <h3>I´m a Graphic Designer</h3>
+        <p>
+        My name is Johanna Michelena and I am a graphic designer from Buenos Aires, Argentina.
+        During the Graphic Design career at the University of Buenos Aires, I have created different projects, designing for web pages, packaging, brands, editorial, social networks, user experiences (UI/UX), and more.
+        <br>
+        <br>
+        I like everything related to design, and I am a fan of photography, illustration, fashion and travel, I enjoy every moment and there is always something new to discover and grow. 
+        </p>
+    </div>
+    <div class="section__me">
+        <img src="images/me.jpg" alt="me">
+    </div>
+</section>
+
+<!--comentario: Sobre mi servicio-->
+<div class="about-container">
+    <h3>About my service</h3>
+<div class="row">
+<div class="col-lg-12">
+<div class="card about__card">
+    <img src="iconos/brand-icon.png" class="brand" alt="brand-icon">
+    <div class="card-body">
+      <h5 class="card-title">Brand design</h5>
+      <p class="card-text">I offer service in design of identity of a brand, logo, office material, brochures, cards, banners, among others.</p>
+    </div>
+</div>
+
+<div class="card about__card--two">
+    <img src="iconos/edit-icon.png" class="edition" alt="edition-icon">
+    <div class="card-body">
+      <h5 class="card-title">Edition</h5>
+      <p class="card-text">
+        I help you to edit your photographs, providing the best retouching of content, whether personal or brand, in high quality.</p>
+    </div>
+</div>
+
+<div class="card about__card--three">
+    <img src="iconos/illustration-icon.png" class="illustration" alt="illustration-icon">
+    <div class="card-body">
+      <h5 class="card-title">Illustration</h5>
+      <p class="card-text">Illustrations can be customized to be used anywhere in your business or personal purpose, making them versatile assets.</p>
+    </div>
+</div>
+
+<div class="card about__card--four">
+        <img src="iconos/print-icon.png" class="print" alt="print-icon">
+        <div class="card-body">
+          <h5 class="card-title">Print design</h5>
+          <p class="card-text">I offer high quality printing service, necessary for brochures, branded stationery and short-run publications.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Footer  -->
+<footer>
+    <h4 class="footer__copyright">
+    <a class="footer__span" href="sobremi.html"><span>Johanna Michelena</span></a> all rights reserved.</h4>
+</footer>
+
+<!-- Bootstrap Separate Links, van siempre antes de cerrar el body -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>
